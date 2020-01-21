@@ -1,0 +1,241 @@
+/* Basic Style */
+
+:root {
+  --text-menu-color: rgb(14, 1, 1);
+  --text-color: rgb(85, 82, 82);
+  --active-color: rgb(78, 198, 171);
+  --card-text-color: rgb(255, 255, 255);
+  --background-card-color: hsl(219, 83%, 95%);
+  --discription-card-color: rgb(50, 50, 50);
+  --discription-card-color-opacity: rgba(255, 255, 255, 0.44);
+  --menu-text-font: "Open Sans", sans-serif;
+  --title-text-font: "Roboto", sans-serif;
+}
+
+.link {
+  text-decoration: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+* {
+  box-sizing: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 1170px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 30px;
+  padding-left: 30px;
+}
+
+/* Header */
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.site-logo .site-logo-link {
+  font-family: var(--title-text-font);
+  color: var(--text-color);
+  font-weight: 300;
+  font-size: 30px;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.site-logo::first-letter {
+  font-weight: 900;
+  color: var(--active-color);
+}
+
+.menu-navigation {
+  display: flex;
+}
+
+.menu-item-link {
+  font-family: var(--menu-text-font);
+  color: var(--text-menu-color);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 0.8;
+  text-transform: uppercase;
+  /* text-decoration: none; */
+  padding-right: 30px;
+}
+
+.menu-item:last-of-type a {
+  padding-right: 0;
+}
+
+/*Main content */
+
+.section-title {
+  display: flex;
+  justify-content: center;
+  font-family: var(--title-text-font);
+  color: var(--text-color);
+  font-weight: 900;
+  font-size: 48px;
+  line-height: 0.7;
+  text-transform: uppercase;
+  padding-top: 83px;
+  padding-bottom: 123px;
+  margin: 0;
+}
+
+.section-title:nth-of-type(2) {
+  padding-top: 105px;
+  padding-bottom: 120px;
+}
+
+/* Products cards */
+
+.cards-products {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.cards-products .card-product {
+  flex-basis: calc(100% / 4 - 22.5px);
+  flex-grow: 0;
+  margin-right: 30px;
+  background-color: var(--background-card-color);
+  margin-top: 30px;
+}
+
+.card-product:nth-child(4n + 4) {
+  margin-right: 0px;
+}
+
+.img-product {
+  height: 322px;
+  object-fit: contain;
+}
+
+.discription-product .discription-product-link {
+  font-family: var(--title-text-font);
+  font-weight: 900;
+  color: var(--card-text-color);
+  width: 201px;
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 32px;
+  padding-left: 14px;
+}
+.discription-product {
+  /* background-color: var(--discription-card-color); */
+}
+
+.bottom-discription {
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--discription-card-color);
+}
+
+.price {
+  align-items: center;
+  height: 40px;
+  font-family: var(--title-text-font);
+  background-color: var(--discription-card-color-opacity);
+  color: var(--card-text-color);
+  font-weight: 900;
+  display: flex;
+  justify-content: center;
+  width: 54px;
+  text-transform: uppercase;
+}
+
+/* blog section  */
+
+.blog-articls {
+  font-family: var(--menu-text-font);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.articl {
+  flex-basis: calc(100% / 3 - 20px);
+  flex-grow: 0;
+  margin-right: 30px;
+}
+
+.articl:last-of-type {
+  margin-right: 0px;
+}
+
+.blog-img {
+  margin: 0;
+  padding: 0;
+  min-width: 100%;
+  height: 261px;
+}
+
+.discription-blog-img {
+  /* margin-bottom: 37px; */
+  margin-top: 14px;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.articl-text {
+  margin-top: 37px;
+  font-size: 14px;
+  line-height: 1.8;
+  font-weight: 400;
+  /* margin-bottom: 14px; */
+}
+
+.load-more-button {
+  font-family: var(--menu-text-font);
+  font-weight: 400;
+  font-size: 14px;
+  margin-top: 14px;
+  width: 159px;
+  height: 51px;
+  border: none;
+  border-radius: 3px;
+  background-color: var(--active-color);
+  color: var(--card-text-color);
+  margin-bottom: 45px;
+}
+
+/* hover */
+
+.menu-item-link:hover,
+.menu-item-link:focus {
+  color: var(--active-color);
+  cursor: pointer;
+}
+
+.card-product:hover .bottom-discription,
+.card-product:focus .bottom-discription {
+  background-color: var(--active-color);
+  cursor: pointer;
+}
